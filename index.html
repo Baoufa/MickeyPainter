@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mickey the Painter</title>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/37b410a8ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <div class="size__group">
+        <button class="btn--size"><span class="bgsmall"></span></button>
+        <button class="btn--size">
+          <span class="bgmedium"></span>
+        </button>
+        <button class="btn--size"><span class="bgbig"></span></button>
+
+        <button id="undo" class="btn--param">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+        <button id="redo" class="btn--param">
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
+        <button id="erase" class="btn--param">
+          <i class="fa-solid fa-eraser"></i>
+        </button>
+      </div>
+
+      <div class="canvas">
+        <div class="canvas__color">
+          <button class="btn btn--color bgeb3b5a"></button>
+          <button class="btn btn--color bgfc5c65"></button>
+          <button class="btn btn--color bgfa8231"></button>
+          <button class="btn btn--color bgfd9644"></button>
+          <button class="btn btn--color bgf7b731"></button>
+          <button class="btn btn--color bgfed330"></button>
+          <button class="btn btn--color bg20bf6b"></button>
+          <button class="btn btn--color bg26de81"></button>
+          <button class="btn btn--color bg2bcbba"></button>
+          <button class="btn btn--color bg0fb9b1"></button>
+          <button class="btn btn--color bg45aaf2"></button>
+          <button class="btn btn--color bg2d98da"></button>
+          <button class="btn btn--color bg4b7bec"></button>
+          <button class="btn btn--color bg3867d6"></button>
+          <button class="btn btn--color bga55eea"></button>
+          <button class="btn btn--color bg8854d0"></button>
+          <button class="btn btn--color bgd1d8e0"></button>
+          <button class="btn btn--color bga5b1c2"></button>
+          <button class="btn btn--color bg4b6584"></button>
+          <button class="btn btn--color bgblack"></button>
+        </div>
+
+        <div class="canvas__group">
+          <canvas width="500" height="500"></canvas>
+          <div class="cursor"></div>
+        </div>
+
+        <div style="display: none">
+          <img id="source" src="./mickey2.png" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
