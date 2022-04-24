@@ -8,15 +8,6 @@ function onDomLoaded() {
   let dotLink;
   let path;
 
-  // BUTTON ELEMENTS
-
-  const buttonsColor = document.querySelectorAll('.btn--color');
-  const buttonsSize = document.querySelectorAll('.btn--size');
-  const sizeSelectors = document.querySelectorAll('span');
-  // const eraseBtn = document.getElementById('erase');
-  const undoBtn = document.getElementById('undo');
-  const redoBtn = document.getElementById('redo');
-
   // DRAW OBJECT
 
   class StyleParameters {
