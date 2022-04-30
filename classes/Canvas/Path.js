@@ -1,13 +1,20 @@
 //import TwoDots from "./TwoDots.js";
 
 export default class Path {
-  constructor(ctx, color, size) {
-    this._twoDotsArray = [];
+  constructor(ctx, color, size, timestamp, uid, twoDotsArray) {
+    this._twoDotsArray = twoDotsArray;
     this._color = color;
     this._size = size;
     this._ctx = ctx;
+    this._timestamp = timestamp ? timestamp : Date.now();
+    this._uid = uid;
     this.changeCtxStyle()
   }
+
+  get timestamp() {
+    return this._timestamp;
+  }
+
 
   get color() {
     return this._color;

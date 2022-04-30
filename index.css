@@ -17,19 +17,23 @@ section {
   height: 100vh;
 }
 
-.flex{
-  display:flex;
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-left: 6.5rem;
 }
-  
+
 .canvas {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   /* height: 90vh; */
-  width: 625px; 
+  width: 625px;
 }
 
 .canvas__group {
@@ -44,13 +48,12 @@ canvas {
 
 .canvas__color {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  gap: .6rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
 
   padding-right: 1rem;
   width: 100px;
   margin: 0 auto;
-
 }
 
 .nav__group {
@@ -59,14 +62,14 @@ canvas {
   justify-content: space-between;
   align-items: center;
   width: 625px;
-   margin-bottom: 1.2rem; 
+  margin-bottom: 1.2rem;
 }
 
 .btn--color {
   margin: 0 auto;
 }
 
-.divider{
+.divider {
   display: block;
 
   width: 90%;
@@ -75,9 +78,7 @@ canvas {
   border-radius: 5px;
   grid-column: span 2;
   margin: 0.5rem auto;
-
 }
-
 
 .btn {
   width: 2rem;
@@ -161,7 +162,7 @@ canvas {
   background-color: black;
 }
 
-.bgwhite{
+.bgwhite {
   background-color: white;
 }
 
@@ -212,26 +213,25 @@ canvas {
   background-color: black;
   border-radius: 50%;
 }
-.bgxlarge{
+.bgxlarge {
   width: 20px;
   height: 20px;
   background-color: black;
   border-radius: 50%;
 }
 
-.btn--signin{
+.btn--signin {
   /* justify-content: flex-start !important;
   padding-left: 0.5rem; */
   width: 7rem !important;
   justify-self: flex-end;
 }
 
-
 .btn--param {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size: inherit;
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
@@ -245,7 +245,11 @@ canvas {
   transition: all 0.2s;
 }
 
-.btn--param:last-of-type{
+.fa-solid {
+  transform: translateY(1px);
+}
+
+.btn--param:last-of-type {
   margin-right: 0;
 }
 
@@ -257,7 +261,7 @@ canvas {
   transform: translateY(-2px) scale(1.1);
 }
 
-.fa-user{
+.fa-user {
   margin-right: 0.5rem;
 }
 
