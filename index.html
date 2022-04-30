@@ -18,26 +18,35 @@
 
   <body>
     <section>
-      <div class="size__group">
-        <button class="btn--size"><span class="bgsmall"></span></button>
-        <button class="btn--size">
-          <span class="bgmedium"></span>
+      <div class="nav__group">
+        <div class=flex>
+          <button id="undo" class="btn--param">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+          </button>
+          <button id="redo" class="btn--param">
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+          </button>
+          <button id="erase" class="btn--param">
+            <i class="fa-solid fa-eraser"></i>
+          </button>
+        </div>
+        
+        <button id="erase" class="btn--param btn--signin">
+          <i class="fa-solid fa-user"></i></i> Sign-in
         </button>
-        <button class="btn--size"><span class="bgbig"></span></button>
-
-        <button id="undo" class="btn--param">
-          <i class="fa-solid fa-arrow-rotate-left"></i>
-        </button>
-        <button id="redo" class="btn--param">
-          <i class="fa-solid fa-arrow-rotate-right"></i>
-        </button>
-        <!-- <button id="erase" class="btn--param">
-          <i class="fa-solid fa-eraser"></i>
-        </button> -->
       </div>
 
       <div class="canvas">
         <div class="canvas__color">
+          <button class="btn--size"><span class="bgsmall"></span></button>
+          <button class="btn--size">
+            <span class="bgmedium"></span>
+          </button>
+          <button class="btn--size"><span class="bglarge"></span></button>
+          <button class="btn--size"><span class="bgxlarge"></span></button>
+  
+          <div class='divider'></div>
+          
           <button class="btn btn--color bgeb3b5a"></button>
           <button class="btn btn--color bgfc5c65"></button>
           <button class="btn btn--color bgfa8231"></button>
@@ -56,12 +65,13 @@
           <button class="btn btn--color bg8854d0"></button>
           <button class="btn btn--color bgd1d8e0"></button>
           <button class="btn btn--color bga5b1c2"></button>
-          <button class="btn btn--color bg4b6584"></button>
+          <button class="btn btn--color bgwhite"></button>
           <button class="btn btn--color bgblack"></button>
         </div>
 
+    
         <div class="canvas__group">
-          <canvas width="500" height="500"></canvas>
+          <canvas width="525" height="525"></canvas>
           <div class="cursor"></div>
         </div>
 
