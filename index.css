@@ -1,33 +1,216 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-}
-
-section {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1024px;
+  font-family: sans-serif;
+  color: #2c2c2c;
   height: 100vh;
 }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 720px;
+  text-align: center;
+  margin: 1rem auto 0 auto;
+  padding: 2rem 4rem;
+  border-radius: 20px;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
+header h1 {
+  margin-bottom: 1.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+header .subtitle {
+  font-weight: bold;
+}
+
+.app {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1024px;
+  padding: 2rem 0 2rem 0;
+}
+
+<<<<<<< Updated upstream
 .flex{
   display:flex;
   justify-content: flex-start;
   align-items: center;
+=======
+a {
+  text-decoration: none;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 10;
+  cursor: default;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.modal-container {
+  position: absolute;
+  -webkit-transform: translate(48%, 40%);
+          transform: translate(48%, 40%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+  cursor: default;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+}
+
+.modal-container .modal {
+  font-family: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem 2rem;
+  width: 50vw;
+  height: 50vh;
+}
+
+.modal-container .modal h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-container .modal .connectbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  color: black;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 1rem 2rem;
+}
+
+.modal-container .modal .connectbtn i {
+  margin-right: 1rem;
+}
+
+.modal-container .modal .connectbtn:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.modal-container .modal .connectbtn:active {
+  -webkit-transform: translateY(-2px) scale(1.05);
+          transform: translateY(-2px) scale(1.05);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+>>>>>>> Stashed changes
   margin-left: 6.5rem;
 }
   
 .canvas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   /* height: 90vh; */
   width: 625px; 
 }
@@ -37,27 +220,52 @@ section {
 }
 
 canvas {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: crosshair;
 }
 
 .canvas__color {
+  display: -ms-grid;
   display: grid;
+<<<<<<< Updated upstream
   grid-template-columns: 1fr 1fr ;
   gap: .6rem;
 
+=======
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+>>>>>>> Stashed changes
   padding-right: 1rem;
   width: 100px;
   margin: 0 auto;
 
 }
 
+.nav__container {
+  text-align: end;
+}
+
+.nav__container .status {
+  margin-bottom: 0.7rem;
+  margin-right: 0.1rem;
+  color: #26de81;
+}
+
 .nav__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 625px;
    margin-bottom: 1.2rem; 
 }
@@ -68,7 +276,6 @@ canvas {
 
 .divider{
   display: block;
-
   width: 90%;
   height: 1px;
   background-color: #d1d8e0;
@@ -86,70 +293,90 @@ canvas {
   cursor: pointer;
   border: 5px white solid;
   border-radius: 3px;
-
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .btn:active {
-  transform: translateY(-2px) scale(1.1);
+  -webkit-transform: translateY(-2px) scale(1.1);
+          transform: translateY(-2px) scale(1.1);
 }
 
 .bgeb3b5a {
   background-color: #eb3b5a;
 }
+
 .bgfc5c65 {
   background-color: #fc5c65;
 }
+
 .bgfa8231 {
   background-color: #fa8231;
 }
+
 .bgfd9644 {
   background-color: #fd9644;
 }
+
 .bgf7b731 {
   background-color: #f7b731;
 }
+
 .bgfed330 {
   background-color: #fed330;
 }
+
 .bg20bf6b {
   background-color: #20bf6b;
 }
+
 .bg26de81 {
   background-color: #26de81;
 }
+
 .bg2bcbba {
   background-color: #2bcbba;
 }
+
 .bg0fb9b1 {
   background-color: #0fb9b1;
 }
+
 .bg45aaf2 {
   background-color: #45aaf2;
 }
+
 .bg2d98da {
   background-color: #2d98da;
 }
+
 .bg4b7bec {
   background-color: #4b7bec;
 }
+
 .bg3867d6 {
   background-color: #3867d6;
 }
+
 .bga55eea {
   background-color: #a55eea;
 }
+
 .bg8854d0 {
   background-color: #8854d0;
 }
+
 .bgd1d8e0 {
   background-color: #d1d8e0;
 }
+
 .bga5b1c2 {
   background-color: #a5b1c2;
 }
@@ -157,6 +384,7 @@ canvas {
 .bg4b6584 {
   background-color: #4b6584;
 }
+
 .bgblack {
   background-color: black;
 }
@@ -167,29 +395,36 @@ canvas {
 
 .btn--size {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 2rem;
   height: 2rem;
-
   cursor: pointer;
   border: 5px white solid;
-
   border-radius: 3px;
   color: white;
   background-color: white;
-
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .btn--size:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .btn--size:active {
-  transform: translateY(-2px) scale(1.1);
+  -webkit-transform: translateY(-2px) scale(1.1);
+          transform: translateY(-2px) scale(1.1);
 }
 
 .bgsmall {
@@ -212,7 +447,12 @@ canvas {
   background-color: black;
   border-radius: 50%;
 }
+<<<<<<< Updated upstream
 .bgxlarge{
+=======
+
+.bgxlarge {
+>>>>>>> Stashed changes
   width: 20px;
   height: 20px;
   background-color: black;
@@ -222,16 +462,29 @@ canvas {
 .btn--signin{
   /* justify-content: flex-start !important;
   padding-left: 0.5rem; */
+  text-overflow: ellipsis;
   width: 7rem !important;
   justify-self: flex-end;
 }
 
 
 .btn--param {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+<<<<<<< Updated upstream
   justify-content: center;
   align-items: center;
 
+=======
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: inherit;
+>>>>>>> Stashed changes
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
@@ -240,21 +493,33 @@ canvas {
   border-radius: 3px;
   color: black;
   background-color: white;
-
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
+<<<<<<< Updated upstream
 .btn--param:last-of-type{
+=======
+.fa-solid {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.btn--param:last-of-type {
+>>>>>>> Stashed changes
   margin-right: 0;
 }
 
 .btn--param:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .btn--param:active {
-  transform: translateY(-2px) scale(1.1);
+  -webkit-transform: translateY(-2px) scale(1.1);
+          transform: translateY(-2px) scale(1.1);
 }
 
 .fa-user{
@@ -267,11 +532,22 @@ canvas {
   left: 100px;
   display: none;
   pointer-events: none;
-
-  transform: translate(-50%, -50%);
-
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-
   border-radius: 100%;
 }
+
+footer {
+  color: #a5b1c2;
+  text-align: center;
+  width: 100vw;
+  margin: 2rem 0;
+}
+
+footer .footer__link {
+  text-decoration: underline;
+  color: #a5b1c2;
+}
+/*# sourceMappingURL=index.css.map */

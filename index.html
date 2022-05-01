@@ -12,11 +12,12 @@
       src="https://kit.fontawesome.com/37b410a8ea.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./oop.js"></script>
+    <script type="module" src="./app.js"></script>
     <!-- <script src="./main.js"></script> -->
   </head>
 
   <body>
+<<<<<<< Updated upstream
     <section>
       <div class="nav__group">
         <div class=flex>
@@ -34,7 +35,50 @@
         <!-- <button id="erase" class="btn--param btn--signin">
           <i class="fa-solid fa-user"></i></i> Sign-in
         </button> -->
+=======
+    <div class="backdrop"></div>
+    <div class="modal-container">
+      <div class="modal">
+      <h2>Connect with</h2>
+      <button class="connectbtn"><i class="fa-brands fa-google"></i><span>your Google account</span></button>
+    </div>
+  </div>
+  <header>
+    <h1>Mickey Painter</h1>
+    <p>Mickey Painter is a collaborative art canvas visible on real-time by the entire world. You can draw offline or join the online community.</p>
+    <p class="subtitle">Your art, Your choice!</p>
+  </header>
+
+    <section class="app">
+     
+      
+      <div class="nav__container">
+        <p class="status"></p>
+        <div class="nav__group">
+          <div class=flex>
+            <a id="download" href="#" class="btn--param">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+            <a id="undo" class="btn--param">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+            </a>
+            <a id="redo" class="btn--param">
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+            </a>
+            <a id="erase" class="btn--param">
+              <i class="fa-solid fa-eraser"></i>
+            </a>
+          </div>
+          
+          <button id="sign" class="btn--param btn--signin">
+            <i class="fa-solid fa-user"></i></i> <span>Connect</span>
+          </button>
+        </div>
+
+
+>>>>>>> Stashed changes
       </div>
+     
 
       <div class="canvas">
         <div class="canvas__color">
@@ -75,10 +119,20 @@
           <div class="cursor"></div>
         </div>
 
+        <!-- <div class="chat">hello</div> -->
+
         <div style="display: none">
           <img id="source" src="./mickey2.png" />
         </div>
       </div>
     </section>
+
+    <footer>Open-souce project by 
+      <a class="footer__link" target="_blank" href="https://github.com/Baoufa">Benjamin Anoufa</a>
+      <span> - </span>
+      <a class="footer__link" target="_blank" href="https://en.wikipedia.org/wiki/MIT_License">Licence MIT</a>
+
+      <p>Mickey painter is Serveless App (using firebase) made with vanilla Javascript and Sass</p>
+    </footer>
   </body>
 </html>
