@@ -21,10 +21,10 @@
   box-sizing: border-box;
 }
 
-html{
-  margin: 0;
-  padding: 0;
-}
+// html{
+//   margin: 0;
+//   padding: 0;
+// }
 
 body {
   font-family: sans-serif;
@@ -70,8 +70,7 @@ header{
   justify-content: center;
   align-items: center;
   max-width: 1024px;
-  padding: 2rem 0 2rem 0;
-
+  padding: 1rem 0 2rem 0;
 }
 
 a {
@@ -81,13 +80,14 @@ a {
 .backdrop {
   position: absolute;
   top:0;
+  left:0;
   display: flex;
   visibility: hidden;
   opacity: 0;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 120%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   z-index: 10;
@@ -112,7 +112,7 @@ a {
   //height: 100vh;
   z-index: 20;
   cursor: default;
-  transition: opacity .4s;
+  transition: all .4s;
   .modal {
     font-family: inherit;
     display: flex;
@@ -440,7 +440,7 @@ footer{
   color: #a5b1c2;
   text-align: center;
   width: 100vw;
-  margin: 2rem 0;
+  padding: 2rem 0;
 
   .footer__link{
     text-decoration:underline;
