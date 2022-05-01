@@ -78,7 +78,7 @@ a {
 }
 
 .backdrop {
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   display: flex;
@@ -87,7 +87,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 120%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   z-index: 10;
@@ -101,7 +101,7 @@ a {
 }
 
 .modal-container{
-  position: absolute;
+  position: fixed;
   // display: flex;
 
   transform: translate(48%, 40%);
