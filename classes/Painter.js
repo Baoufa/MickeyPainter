@@ -9,16 +9,4 @@ export default class Painter {
     this._canvas = new Canvas(this._auth);
     this._navigation = new Navigation(this._canvas, this._auth);
   }
-
-  // get navigation(){
-  //   return this._navigation;
-  // }
-
-  // get canvas() {
-  //   return this._canvas;
-  // }
-
-  // get auth(){
-  //   return this._auth;
-  // }
 }

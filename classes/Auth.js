@@ -11,9 +11,7 @@ import {
   set,
   onChildAdded,
   onChildRemoved,
-  push,
   remove,
-  update,
 } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js';
 
 export default class Auth {
@@ -22,13 +20,9 @@ export default class Auth {
     this._user = null;
     this._uid = null;
     this._userName = null;
-
     this.param();
-    this._refMsg = null;
-    this._isEntryCreated = false;
     this._refPathCreated = ref(this._db, 'canvas/created/');
     this._refPathDeleted = ref(this._db, 'canvas/deleted/');
-    this._path;
   }
 
   get user() {
@@ -89,7 +83,7 @@ export default class Auth {
   sendPath(path) {
     let refPath = ref(this._db, 'canvas/created/' + path.timestamp);
     set(refPath, path);
-    remove(this._refPathDeleted); // Clear deleter folder
+    remove(this._refPathDeleted); 
   }
 
   sendUndoPath(path) {

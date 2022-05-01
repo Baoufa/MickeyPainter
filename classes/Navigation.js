@@ -1,7 +1,8 @@
-
-
 export default class Navigation {
   constructor(canvas, auth) {
+    this._canvas = canvas;
+    this._auth = auth;
+
     this._colorBtnElements = document.querySelectorAll('.btn--color');
     this._sizeBtnElements = document.querySelectorAll('.btn--size');
     this._undoBtnElement = document.getElementById('undo');
@@ -14,20 +15,17 @@ export default class Navigation {
     this._modalElement = document.querySelector('.modal-container');
     this._statusEl = document.querySelector('.status');
 
-
-    this._canvas = canvas;
-    this._auth = auth;
     this.addEventsOnColorBtns();
     this.addEventsOnSizeBtns();
     this._undoBtnElement.addEventListener('click', this.onUndo.bind(this));
     this._redoBtnElement.addEventListener('click', this.onRedo.bind(this));
     this._eraseBtnElement.addEventListener('click', this.onErase.bind(this));
-
     this._signBtnElement.addEventListener('click', this.toggleModal.bind(this));
     this._connectBtnElement.addEventListener('click', this.onSign.bind(this));
-    this._backdropElement.addEventListener('click', this.toggleModal.bind(this));
-
-    
+    this._backdropElement.addEventListener(
+      'click',
+      this.toggleModal.bind(this)
+    );
     this._downloadBtnElement.addEventListener(
       'click',
       this.onDownload.bind(this)
@@ -44,12 +42,12 @@ export default class Navigation {
   changeColor(rgb) {
     this._canvas.color = rgb;
     for (let btn of this._sizeBtnElements) {
-     btn.querySelector('span').style.backgroundColor = rgb;
-     btn.querySelector('span').style.border = 'none';
-     
-     if(rgb === 'rgb(255, 255, 255)'){
-      btn.querySelector('span').style.border = '1px dotted #d1d8e0';
-     }
+      btn.querySelector('span').style.backgroundColor = rgb;
+      btn.querySelector('span').style.border = 'none';
+
+      if (rgb === 'rgb(255, 255, 255)') {
+        btn.querySelector('span').style.border = '1px dotted #d1d8e0';
+      }
     }
   }
 
@@ -90,7 +88,7 @@ export default class Navigation {
     }
   }
 
-  onErase(){
+  onErase() {
     this._canvas.eraseAll();
   }
 
@@ -113,7 +111,7 @@ export default class Navigation {
     });
   }
 
-  toggleModal(){
+  toggleModal() {
     this._backdropElement.classList.toggle('visible');
     this._modalElement.classList.toggle('visible');
   }

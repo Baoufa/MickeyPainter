@@ -1,4 +1,3 @@
-
 export default class Path {
   constructor(ctx, color, size, timestamp, uid, twoDotsArray) {
     this._twoDotsArray = [];

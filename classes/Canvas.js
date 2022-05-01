@@ -7,24 +7,20 @@ export default class Canvas {
     this._paths = [];
     this._deletedPaths = [];
     this._currentPath = null;
-    this._canvasElement = document.querySelector('canvas');
-    this._ctx = this._canvasElement.getContext('2d');
     this._isDrawing = false;
     this._startCoord = [];
     this._color = 'rgb(0,0,0)';
     this._size = 5;
     this._auth = auth;
+    this._canvasElement = document.querySelector('canvas');
+    this._ctx = this._canvasElement.getContext('2d');
 
-    this._ctx.strokeStyle = 'black';
-    this._ctx.lineWidth = 10;
-    this._ctx.lineJoin = 'round';
-    this._ctx.lineCap = 'round';
-    this._ctx.fillStyle = 'white';
- 
     this._canvasElement.addEventListener('mousemove',this.updatePath.bind(this));
     this._canvasElement.addEventListener('mousedown', this.startPath.bind(this));
     this._canvasElement.addEventListener('mouseup', this.endPath.bind(this));
     this._canvasElement.addEventListener('mouseout', this.endPath.bind(this));
+
+    this.init();
   }
 
 
@@ -54,6 +50,14 @@ export default class Canvas {
 
   set size(size) {
     this._size = size
+  }
+
+  init(){
+    this._ctx.strokeStyle = 'black';
+    this._ctx.lineWidth = 5;
+    this._ctx.lineJoin = 'round';
+    this._ctx.lineCap = 'round';
+    this._ctx.fillStyle = 'white';
   }
 
   reset(){
