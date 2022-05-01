@@ -7,7 +7,7 @@ export default class Path {
     this._uid = uid;
     this._twoDotsArray = twoDotsArray;
     this._ctx = ctx;
-    this.changeCtxStyle()
+    this.changeCtxStyle();
   }
 
   get color() {

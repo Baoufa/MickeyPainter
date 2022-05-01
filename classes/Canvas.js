@@ -94,6 +94,7 @@ export default class Canvas {
 
   updatePath(event) {
     if(this._isDrawing) {
+      this._currentPath.changeCtxStyle();
       let endCoord = [event.offsetX, event.offsetY];
       this._currentPath.addDots(this._startCoord, endCoord);
       this.draw(this._startCoord, endCoord);
@@ -105,6 +106,7 @@ export default class Canvas {
     //FOR PATH UPDATE
     if (this._isDrawing) {
       if (this._auth.uid) {
+        this._currentPath.changeCtxStyle();
         this._auth.sendPath(this._currentPath);
       }
     }
