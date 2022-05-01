@@ -1,18 +1,12 @@
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 export default class Navigation {
-  constructor(canvas) {
+  constructor(canvas, auth) {
     this._colorBtnElements = document.querySelectorAll('.btn--color');
     this._sizeBtnElements = document.querySelectorAll('.btn--size');
     this._undoBtnElement = document.getElementById('undo');
     this._redoBtnElement = document.getElementById('redo');
     this._eraseBtnElement = document.getElementById('erase');
-<<<<<<< Updated upstream
-=======
     this._signBtnElement = document.getElementById('sign');
     this._downloadBtnElement = document.getElementById('download');
     this._connectBtnElement = document.querySelector('.connectbtn');
@@ -21,16 +15,14 @@ export default class Navigation {
     this._statusEl = document.querySelector('.status');
 
 
->>>>>>> Stashed changes
     this._canvas = canvas;
+    this._auth = auth;
     this.addEventsOnColorBtns();
     this.addEventsOnSizeBtns();
     this._undoBtnElement.addEventListener('click', this.onUndo.bind(this));
     this._redoBtnElement.addEventListener('click', this.onRedo.bind(this));
     this._eraseBtnElement.addEventListener('click', this.onErase.bind(this));
-<<<<<<< Updated upstream
 
-=======
     this._signBtnElement.addEventListener('click', this.toggleModal.bind(this));
     this._connectBtnElement.addEventListener('click', this.onSign.bind(this));
     this._backdropElement.addEventListener('click', this.toggleModal.bind(this));
@@ -40,7 +32,6 @@ export default class Navigation {
       'click',
       this.onDownload.bind(this)
     );
->>>>>>> Stashed changes
   }
 
   addEventsOnColorBtns() {
@@ -73,19 +64,6 @@ export default class Navigation {
     this._canvas.size = int;
   }
 
-<<<<<<< Updated upstream
-  onUndo(){
-    if(this._canvas.paths.length > 0){
-      this._canvas.deletedPaths.push(this._canvas.paths.pop());
-      this._canvas.redrawAll();
-    }
-  }
-
-  onRedo(){
-    if(this._canvas.deletedPaths.length > 0){
-    this._canvas.paths.push(this._canvas.deletedPaths.pop());
-    this._canvas.redrawAll();
-=======
   onUndo() {
     if (this._canvas.paths.length > 0) {
       if (this._auth.uid) {
@@ -109,15 +87,12 @@ export default class Navigation {
         this._canvas.paths.push(this._canvas.deletedPaths.pop());
         this._canvas.redrawAll();
       }
->>>>>>> Stashed changes
     }
   }
 
   onErase(){
     this._canvas.eraseAll();
   }
-<<<<<<< Updated upstream
-=======
 
   onSign() {
     this._auth.auth().then(response => {
@@ -147,5 +122,4 @@ export default class Navigation {
     this._downloadBtnElement.download = 'myimage.png';
     this._downloadBtnElement.href = this._canvas._canvasElement.toDataURL();
   }
->>>>>>> Stashed changes
 }

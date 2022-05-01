@@ -1,10 +1,12 @@
-//import TwoDots from "./TwoDots.js";
 
 export default class Path {
-  constructor(ctx, color, size) {
+  constructor(ctx, color, size, timestamp, uid, twoDotsArray) {
     this._twoDotsArray = [];
     this._color = color;
     this._size = size;
+    this._timestamp = timestamp !== null ? timestamp : Date.now();
+    this._uid = uid;
+    this._twoDotsArray = twoDotsArray;
     this._ctx = ctx;
     this.changeCtxStyle()
   }
@@ -27,6 +29,14 @@ export default class Path {
     this._ctx.lineWidth = size;
   }
 
+  get timestamp(){
+    return this._timestamp;
+  }
+
+  get uid(){
+    return this._uid;
+  }
+
   get twoDotsArray(){
     return this._twoDotsArray;
   }
@@ -37,7 +47,6 @@ export default class Path {
   }
 
   addDots(startCoord, endCoord) {
-    //let twoDots = new TwoDots(startCoord,endCoord);
     let twoDots = [startCoord, endCoord];
     this._twoDotsArray.push(twoDots);
   }

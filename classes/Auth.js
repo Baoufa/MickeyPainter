@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import {
   getAuth,
   signInWithPopup,
@@ -120,4 +118,3 @@ export default class Auth {
     onChildRemoved(this._refPathDeleted, callback2);
    }
 }
->>>>>>> Stashed changes

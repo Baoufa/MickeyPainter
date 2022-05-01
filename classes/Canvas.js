@@ -1,9 +1,9 @@
-import Path from "./Canvas/Path.js";
+import Path from "./Path.js";
 
 export default class Canvas {
     _currentPath;
 
-  constructor() {
+  constructor(auth) {
     this._paths = [];
     this._deletedPaths = [];
     this._currentPath = null;
@@ -11,9 +11,9 @@ export default class Canvas {
     this._ctx = this._canvasElement.getContext('2d');
     this._isDrawing = false;
     this._startCoord = [];
-
     this._color = 'rgb(0,0,0)';
     this._size = 5;
+    this._auth = auth;
 
     this._ctx.strokeStyle = 'black';
     this._ctx.lineWidth = 10;
@@ -56,15 +56,19 @@ export default class Canvas {
     this._size = size
   }
 
+  reset(){
+    this._paths = [];
+    this._deletedPaths = [];
+    this._currentPath = null;
+    this._startCoord = [];
+    this._color = 'rgb(0,0,0)';
+    this._size = 5;
+    this._ctx.fillRect(0, 0, 525, 525);
+  }
 
   startPath(event) {
     this._isDrawing = true;
     this._deletedPaths = [];
-<<<<<<< Updated upstream
-    this._currentPath = new Path(this._ctx, this._color, this._size);
-    
-=======
-
     this._currentPath = new Path(
       this._ctx,
       this._color,
@@ -73,13 +77,11 @@ export default class Canvas {
       this._auth.uid,
       []
     );
-
     // if connected let addOnChild listener add to paths array
     if (!this._auth.uid) {
       this._paths.push(this._currentPath);
     }
 
->>>>>>> Stashed changes
     this._startCoord = [event.offsetX, event.offsetY];
     let endCoord = this._startCoord;
     this._currentPath.addDots(this._startCoord, endCoord);
@@ -95,18 +97,12 @@ export default class Canvas {
     }
   }
 
-<<<<<<< Updated upstream
-  endPath(event){
-    if(this._isDrawing){
-      this._paths.push(this._currentPath);
-=======
   endPath(event) {
     //FOR PATH UPDATE
     if (this._isDrawing) {
       if (this._auth.uid) {
         this._auth.sendPath(this._currentPath);
       }
->>>>>>> Stashed changes
     }
     this._isDrawing = false;
   }
@@ -118,15 +114,6 @@ export default class Canvas {
     this._ctx.stroke();
   }
 
-<<<<<<< Updated upstream
-  eraseAll(){
-    this._currentPath = new Path(this._ctx, 'rgb(255,255,255', 525);
-    this._deletedPaths = [];
-    this._currentPath.addDots([262.2, 262.2],[262.2, 262.2]); // Canvas center coordinates
-    this.draw([262.2, 262.2],[262.2, 262.2]);
-    this._paths.push(this._currentPath);
-    console.log(this._paths);
-=======
   eraseAll() {
     this._ctx.fillRect(0, 0, 525, 525);
     this._currentPath = new Path(
@@ -146,7 +133,6 @@ export default class Canvas {
     } else {
       this._paths.push(this._currentPath); // if connected let AddOnchild listener push to paths array;
     }
->>>>>>> Stashed changes
   }
 
   redrawAll(){
@@ -159,8 +145,6 @@ export default class Canvas {
       }
     }
   }
-<<<<<<< Updated upstream
-=======
 
   getOnlinePath(data){
     let onlinePath = new Path(
@@ -185,7 +169,6 @@ export default class Canvas {
 
   removedFromCreated(data){
     let onlinePath = this.getOnlinePath(data);
-
     let localPath = this._paths.find( path => path.timestamp === onlinePath._timestamp);
     let index =  this._paths.indexOf(localPath);
     this._paths.splice(index, 1);
@@ -194,7 +177,6 @@ export default class Canvas {
 
   removedFromDeleted(data){
     let onlinePath = this.getOnlinePath(data);
-
     let localPath = this._deletedPaths.find( path => path.timestamp === onlinePath._timestamp);
     let index =  this._deletedPaths.indexOf(localPath);
     this._deletedPaths.splice(index, 1);
@@ -205,5 +187,4 @@ export default class Canvas {
     let onlinePath = this.getOnlinePath(data);
     this._deletedPaths.push(onlinePath);
   }
->>>>>>> Stashed changes
 }

@@ -71,12 +71,6 @@ header .subtitle {
   padding: 2rem 0 2rem 0;
 }
 
-<<<<<<< Updated upstream
-.flex{
-  display:flex;
-  justify-content: flex-start;
-  align-items: center;
-=======
 a {
   text-decoration: none;
 }
@@ -197,10 +191,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
->>>>>>> Stashed changes
   margin-left: 6.5rem;
 }
-  
+
 .canvas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,7 +205,7 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   /* height: 90vh; */
-  width: 625px; 
+  width: 625px;
 }
 
 .canvas__group {
@@ -229,19 +222,12 @@ canvas {
 .canvas__color {
   display: -ms-grid;
   display: grid;
-<<<<<<< Updated upstream
-  grid-template-columns: 1fr 1fr ;
-  gap: .6rem;
-
-=======
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 0.6rem;
->>>>>>> Stashed changes
   padding-right: 1rem;
   width: 100px;
   margin: 0 auto;
-
 }
 
 .nav__container {
@@ -267,14 +253,14 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
   width: 625px;
-   margin-bottom: 1.2rem; 
+  margin-bottom: 1.2rem;
 }
 
 .btn--color {
   margin: 0 auto;
 }
 
-.divider{
+.divider {
   display: block;
   width: 90%;
   height: 1px;
@@ -282,9 +268,7 @@ canvas {
   border-radius: 5px;
   grid-column: span 2;
   margin: 0.5rem auto;
-
 }
-
 
 .btn {
   width: 2rem;
@@ -389,7 +373,7 @@ canvas {
   background-color: black;
 }
 
-.bgwhite{
+.bgwhite {
   background-color: white;
 }
 
@@ -447,19 +431,15 @@ canvas {
   background-color: black;
   border-radius: 50%;
 }
-<<<<<<< Updated upstream
-.bgxlarge{
-=======
 
 .bgxlarge {
->>>>>>> Stashed changes
   width: 20px;
   height: 20px;
   background-color: black;
   border-radius: 50%;
 }
 
-.btn--signin{
+.btn--signin {
   /* justify-content: flex-start !important;
   padding-left: 0.5rem; */
   text-overflow: ellipsis;
@@ -467,16 +447,10 @@ canvas {
   justify-self: flex-end;
 }
 
-
 .btn--param {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< Updated upstream
-  justify-content: center;
-  align-items: center;
-
-=======
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -484,7 +458,6 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
   font-size: inherit;
->>>>>>> Stashed changes
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
@@ -499,16 +472,12 @@ canvas {
   transition: all 0.2s;
 }
 
-<<<<<<< Updated upstream
-.btn--param:last-of-type{
-=======
 .fa-solid {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
 
 .btn--param:last-of-type {
->>>>>>> Stashed changes
   margin-right: 0;
 }
 
@@ -522,7 +491,7 @@ canvas {
           transform: translateY(-2px) scale(1.1);
 }
 
-.fa-user{
+.fa-user {
   margin-right: 0.5rem;
 }
 
