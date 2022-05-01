@@ -100,6 +100,7 @@ export default class Navigation {
       this._statusEl.style.color = '#26de81';
 
       this._canvas.reset();
+      this.changeColor('rgb(0, 0, 0)');
       this._auth.initOnChildAdded(
         this._canvas.addToCreated.bind(this._canvas),
         this._canvas.addToDeleted.bind(this._canvas)
